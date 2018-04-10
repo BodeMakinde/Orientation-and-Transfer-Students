@@ -1,5 +1,5 @@
 ---
-title: "Are transfer student rates persistence at CWU better after attending an Orientation Session?"
+title: "Are transfer student rates persistence at the university better after attending an Orientation Session?"
 author: "Olabode Makinde"
 date: "December 20, 2017"
 output: word_document
@@ -37,14 +37,14 @@ options(scipen=999)
         Orientation programming is a critical and useful component of this recruiting process. According to Mayhew et all (2008), "The primary mission of orientation programs is to aid in the successful transition of new students to college, but orientation professionals are often illequipped to provide evidence related to the efficacy of their programs" (p.2).
         The trend that I noticed as I consumed research papers dedicated to this topic is that an overwhelming majority of them are about first year students, general education courses, PostBacc e.t.c 
         Willliford argued in 2001 that "students not only attended these orientation programs but credited them with strongly influencing their expectations of the collegiate experience and in improving adjustment, rates of performance, retention and graduation (p.327)" 
-        CWU is a regional, comprehensive public university located on a 380-acre campus in Ellensburg in the US state of Washington. For fiscal year 2017, CWU accepted 2553 unique transfer students but only 83% of them enrolled for classes.
-        CWU's director of Sophomore Year Experirnece department, One of the programs set up by the university to help improve retention and persistence of these transfer students is looking at ways to increase the efficiency of their recruiting tools. Orientation programming is one those important tools.  
+        the university is a regional, comprehensive public university located on a 380-acre campus in Ellensburg in the US state of Washington. For fiscal year 2017, the university accepted 2553 unique transfer students but only 83% of them enrolled for classes.
+        the university's director of Sophomore Year Experirnece department, One of the programs set up by the university to help improve retention and persistence of these transfer students is looking at ways to increase the efficiency of their recruiting tools. Orientation programming is one those important tools.  
 
 #Research Design
 
         The bulk of analysis for this study is performed using R. R has a robust number of libraries with unique fuctions that can help us efficiently analyze the relationship between transfer students and orientation sessions.This study will use the noncentral chi-squared distrubition which is a generalization of Pearsons's Chi-squared test of independence.
         The idea here is very straightforward, the analysis will be run in R to calculate a chi-square statistic and then use that to show the relationship between the two categorical varibles we are concerned about in this study (Orientation  and Persistence). A chi-square test for independence compares two variables in a contingency table to see if they are related. In a more general sense, it tests to see whether distributions of categorical variables differ from each another.
-        Cohorts of transfer students that enrolled at CWU for Fall 2014, Fall 2015 and Fall 2016 will be analysed for this study. This study will answer questions that relates to these cohorts only due to lack of rich historical data on orientation at CWU. At the end of the study, comparisons will be made accross the cohorts to establish any differences that exists between them. 
+        Cohorts of transfer students that enrolled at the university for Fall 2014, Fall 2015 and Fall 2016 will be analysed for this study. This study will answer questions that relates to these cohorts only due to lack of rich historical data on orientation at the university. At the end of the study, comparisons will be made accross the cohorts to establish any differences that exists between them. 
         The calculated chi-square statistic will be compared to a critical value from a chi-square table. If the chi-square value is more than the critical value, then there is a significant difference. The p value from pchisq will be used to indicate significance across all orientation session types involved in this study. 
           
 
@@ -159,7 +159,7 @@ transfer1149$ACADEMIC_TERM_YEAR_NAME2 <- as.numeric(transfer1149$ACADEMIC_TERM_Y
 transfer1149$ActualYear <- ifelse(grepl("Spring|Winter|Summer", transfer1149$ACADEMIC_TERM_YEAR_NAME), 
 transfer1149$ACADEMIC_TERM_YEAR_NAME2 - 1, transfer1149$ACADEMIC_TERM_YEAR_NAME2) #year numeric only variable added 
 
-#there are duplicate records for each student ID to indicate their progress after they enrolled at CWU 
+#there are duplicate records for each student ID to indicate their progress after they enrolled at the university 
 #now we will attempt to combine duplicate record to figure out who dropped or retained 
 
 #here you see how %>% makes the code easier to read
@@ -319,7 +319,7 @@ transfer1159$ACADEMIC_TERM_YEAR_NAME2 <- as.numeric(transfer1159$ACADEMIC_TERM_Y
 transfer1159$ActualYear <- ifelse(grepl("Spring|Winter|Summer", transfer1159$ACADEMIC_TERM_YEAR_NAME), 
 transfer1159$ACADEMIC_TERM_YEAR_NAME2 - 1, transfer1159$ACADEMIC_TERM_YEAR_NAME2) #year numeric only variable added 
 
-#there are duplicate records for each student ID to indicate their progress after they enrolled at CWU 
+#there are duplicate records for each student ID to indicate their progress after they enrolled at the university 
 #now we will attempt to combine duplicate record to figure out who dropped or retained 
 
 #here you see how %>% makes the code easier to read
@@ -491,7 +491,7 @@ transfer1169$ACADEMIC_TERM_YEAR_NAME2 <- as.numeric(transfer1169$ACADEMIC_TERM_Y
 transfer1169$ActualYear <- ifelse(grepl("Spring|Winter|Summer", transfer1169$ACADEMIC_TERM_YEAR_NAME), 
 transfer1169$ACADEMIC_TERM_YEAR_NAME2 - 1, transfer1169$ACADEMIC_TERM_YEAR_NAME2) #year numeric only variable added 
 
-#there are duplicate records for each student ID to indicate their progress after they enrolled at CWU 
+#there are duplicate records for each student ID to indicate their progress after they enrolled at the university 
 #now we will attempt to combine duplicate record to figure out who dropped or retained 
 
 #here you see how %>% makes the code easier to read
@@ -636,13 +636,13 @@ chisq.test(orient1169.tab)
 
 
 #Conclusion 
-        This study equips orientation professionals here at CWU with facts about the program for transfer students. In this study the 3 transfer student cohorts were analyzed (Fall 2014, Fall 2015 and Fall 2016). 
-        In all the cohorts, students that did not attend any oreintation session showed a strong significant positive relationship to returning to CWU for their second year. At least 70 percent of these transfer students that choose not to attend any session were retained by CWU. 
+        This study equips orientation professionals here at the university with facts about the program for transfer students. In this study the 3 transfer student cohorts were analyzed (Fall 2014, Fall 2015 and Fall 2016). 
+        In all the cohorts, students that did not attend any oreintation session showed a strong significant positive relationship to returning to the university for their second year. At least 70 percent of these transfer students that choose not to attend any session were retained by the university. 
         "Transfer Orentation session" and "Transfer Oreintation Session 2" students showed strong persistence as well. With at least 80 percent retention of the students afeter their first year. 
         I did not find any strong realtionship between the other orientation sessions. This is in part attributed to the low number of attendants for those sessions. 
         Orientation is still valuable to transfer students but clearly more transfer students are skipping this program. These students are more experienced and may benefit from a robust orientation program that focuses on how they can quickly get into their classes or find cheaper housing. If the university dedicates more resorces into orientation, for example establishing a department for orientation programming.
-        The strategy of the two high performing sessions should be copied and made the standard for all sessions offered to transfer studnts going forward. This would increase the attendance of orientation at CWU for transfer students. 
-        One way to improve this study is to analyze exit surveys from the less performing orientation sessions. It would be intresting to see if there is any relationship between a students persistence at CWU and their orientation experience.    
+        The strategy of the two high performing sessions should be copied and made the standard for all sessions offered to transfer studnts going forward. This would increase the attendance of orientation at the university for transfer students. 
+        One way to improve this study is to analyze exit surveys from the less performing orientation sessions. It would be intresting to see if there is any relationship between a students persistence at the university and their orientation experience.    
         
         
         
