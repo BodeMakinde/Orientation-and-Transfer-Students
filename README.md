@@ -1,2 +1,4 @@
 # Orientation-and-Transfer-Students
-Persistence of students after attending an Orientation Session is examined 
+
+## All analysis performed in R studio
+### Final research file produced with Knitr package in R Markdown 
