@@ -75,7 +75,7 @@ Focus Executables:
 DataPulls:
 ==========
 
-*  unique IDs of transfer students for Fall 2014 cohort, Fall 2015 cohort, and Fall 2016 cohort (these cohorts are based on IPEDs definitions)
+*  Classifications of transfer students for Fall 2014 cohort, Fall 2015 cohort, and Fall 2016 cohort (these cohorts are based on IPEDs definitions)
 then aggregate information on these unique students about their:
 
 *  a file of retention information (retention_characteristics)
